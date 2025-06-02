@@ -37,9 +37,8 @@ public class AppiumBasics {
         // Appium supports Xpath, ID, accessibilityID, classname, androidUIAutomator
         driver.findElement(AppiumBy.xpath("//android.widget.TextView[@content-desc='Preference']")).click();
 
-
+        // git profile changed
         driver.quit();
         service.stop();
-
     }
 }
