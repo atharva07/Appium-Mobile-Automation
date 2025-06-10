@@ -48,6 +48,28 @@ public class BaseTest {
                 "duration",2000));
     }
 
+    public void scrollToEnd()
+    {
+        Object result = ((JavascriptExecutor) driver).executeScript("mobile: scrollGesture", ImmutableMap.of(
+                "left", 100,
+                "top", 100,
+                "width", 200,
+                "height", 200,
+                "direction", "down",
+                "percent", 3.0
+        ));
+
+        boolean canScrollMore = result != null && (boolean) result;
+    }
+
+    public void swipeAction(WebElement ele, String direction) {
+        ((JavascriptExecutor) driver).executeScript("mobile: swipeGesture", ImmutableMap.of(
+                "elementId", ((RemoteWebElement)ele).getId(),
+                "direction", direction,
+                "percent", 0.30
+        ));
+    }
+
     @AfterClass
     public void tearDown() {
         driver.quit();
