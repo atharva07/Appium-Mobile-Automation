@@ -57,6 +57,7 @@ public class BaseTest {
                 "direction", "down",
                 "percent", 3.0
         ));
+        @SuppressWarnings("unused")
         boolean canScrollMore = result != null && (boolean) result;
     }
 

@@ -1,8 +1,6 @@
 package mobileappium;
 
-import com.google.common.collect.ImmutableMap;
 import io.appium.java_client.AppiumBy;
-import org.openqa.selenium.JavascriptExecutor;
 import org.testng.annotations.Test;
 
 import java.net.MalformedURLException;
